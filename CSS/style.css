@@ -19,10 +19,14 @@ body, html {
     color: azure;
 }
 
-.subTitle {
+.title {
     color: azure;
 }
 
-.title {
+strong {
+    color: azure;
+}
+
+#coffees {
     color: azure;
 }
