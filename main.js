@@ -2,6 +2,8 @@
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
+
+
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
@@ -68,30 +70,16 @@ function coffeeElimination(value) {
 }
 
 function coffeeSearch() {
-    var coffeeInfo = {
-        id: " ",
-        name: " ",
-        roast: " ",
-    };
+    console.log("hey sam")
+    var coffeeInfo = {};
     //Id's start at 1 coffees.length + 1;
     coffeeInfo.id = coffees.length + 1;
-    coffeeInfo.name = document.getElementById("coffeeName").value;
-    coffeeInfo.roast = document.getElementById("coffeeName").value;
-    coffeeInfo.push(coffeeInfo);
+    coffeeInfo.roast = document.getElementById("addCoffeeRoast").value;
+    coffeeInfo.name = document.getElementById("nameOfAddedCoffee").value;
+    coffees.push(coffeeInfo);
+
+    updateCoffees();
 }
-
-function addNewCoffee (input) {
-    var searchID = coffees.length+1;
-    var searchName = inputName.value.toString();
-    var searchRoast = inputRoast.value.toString();
-    input = {id: searchID, name: searchName, roast: searchRoast};
-    coffees.push(input);
-    console.log(coffees);
-    tbody.innerHTML = renderCoffees(coffees);
-}
-
-
-
 
 tbody.innerHTML = renderCoffees(coffees);
 
