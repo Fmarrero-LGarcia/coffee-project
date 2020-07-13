@@ -1,34 +1,68 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
-    <link rel="stylesheet" href="style.css">
+    <title>Coffee!!!</title>
+<!--    <link rel="stylesheet" href="CSS/style.css">-->
 </head>
 <body>
-    <h1>Coffee!</h1>
+<h1 class="mainTitle">Coffee!</h1>
 
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
+<form>
+    <p>
+    <label for="roast-selection"><strong class="subTitle">Roast</strong>
+<!--function updatecoffee from JS-->
+        <select id="roast-selection" onchange="updateCoffees(value)">
+            <option value="light">light</option>
+            <option value="medium">medium</option>
+            <option value="dark">dark</option>
+            <option value="all">all</option>
         </select>
-        <input id="submit" type="submit" />
-    </form>
+    </label>
+    </p>
+    <label for="coffeeName"><strong class="subTitle">Coffee Name</strong></label>
+    <input id="coffeeName" value="" type="text" onkeyup="coffeeElimination(value)"/><br>
+    <p>
+    <button id="addCoffeeBtn1" type="button">Submit</button>
+    </p>
+</form>
 
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
 
-    <script src="main.js"></script>
+<h2 class="title">Add a Coffee</h2>
+<form>
+    <p>
+        <label for="addCoffeeRoast"><strong>Roast</strong></label>
+        <select id="addCoffeeRoast">
+            <option value="light">light</option>
+            <option value="medium">medium</option>
+            <option value="dark">dark</option>
+            <option value="all">all</option>
+        </select>
+    </p>
+    <label for="nameOfAddedCoffee"><strong class="subTitle">Name</strong></label>
+    <input id="nameOfAddedCoffee" value="" type="text"/><br>
+    <p>
+    <button id="addCoffeeBtn2" type="button" onclick="coffeeSearch()">Submit</button>
+    </p>
+</form>
+
+
+
+
+<!--<table>-->
+<!--    <thead>-->
+<!--    <tr>-->
+<!--        <th>ID</th>-->
+<!--        <th>NAME</th>-->
+<!--        <th>ROAST</th>-->
+<!--    </tr>-->
+<!--    </thead>-->
+
+<!--//changed the trbody to div//-->
+    <div id="coffees"></div>
+<!--</table>-->
+
+<script src="main.js"></script>
 </body>
 </html>

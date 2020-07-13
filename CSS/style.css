@@ -1,0 +1,28 @@
+table {
+    border-collapse: collapse;
+    margin: 15px 0;
+}
+
+td, th {
+    border: 1px solid black;
+    padding: 5px 10px;
+}
+body, html {
+    height: 100%;
+    width: 100%;
+    background-image:url("../IMG/coffeebg.png");
+    background-size: cover;
+
+}
+
+.mainTitle {
+    color: azure;
+}
+
+.subTitle {
+    color: azure;
+}
+
+.title {
+    color: azure;
+}
