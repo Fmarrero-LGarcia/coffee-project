@@ -10,17 +10,24 @@ td, th {
 body, html {
     height: 100%;
     width: 100%;
-    background-image:url("../IMG/coffeebg.png");
+    background-image: url("../IMG/coffeebg2.jpeg");
     background-size: cover;
-
+}
+h1 {
+    color: darkcyan;
+}
+.subTitle {
+    color: darkcyan;
 }
 
 .mainTitle {
-    color: azure;
+    color: darkcyan;
+
 }
 
+
 .title {
-    color: azure;
+    color: darkcyan;
 }
 
 strong {
@@ -28,5 +35,8 @@ strong {
 }
 
 #coffees {
+    color: darkcyan;
+}
+hr {
     color: azure;
 }
