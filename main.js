@@ -27,10 +27,8 @@ var coffees = [
 ];
 
 function renderCoffee(coffee) {
-
     // changed tables into divs
-
-    var html = '<div class="coffee">';
+    var html = '<div class="col-6 coffee">';
     // html += '<div>' + coffee.id + '</div>';
     html += '<div class="coffeeName"><h3> ' + coffee.name ;
     //added a span tag for names to beside each other

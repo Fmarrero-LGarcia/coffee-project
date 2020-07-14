@@ -8,28 +8,29 @@
           integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 </head>
 <body>
-<h1 class="mainTitle">Coffee!</h1>
-<div class="d-flex-row col-6" id="forms">
+<h1 class="mainTitle d-flex justify-content-center">Coffee!</h1><hr>
+<div>
+<!--first coffee form-->
 <form>
     <p>
-    <label for="roast-selection"><strong class="subTitle">Roast</strong>
-<!--function updatecoffee from JS-->
-        <select id="roast-selection" onchange="updateCoffees(value)">
-            <option value="light">light</option>
-            <option value="medium">medium</option>
-            <option value="dark">dark</option>
-            <option value="all">all</option>
+    <div class="form-group col-md-2">
+        <label for="roast-selection"><strong>Roast</strong></label>
+        <select id="roast-selection" class="form-control" onchange="updateCoffees(value)">
+            <option selected>all</option>
+            <option>light</option>
+            <option>medium</option>
+            <option>dark</option>
         </select>
-    </label>
-    </p>
+    </div>
     <label for="coffeeName"><strong class="subTitle">Coffee Name</strong></label>
     <input id="coffeeName" value="" type="text" onkeyup="coffeeElimination(value)"/><br>
     <p>
-    <button id="addCoffeeBtn1" type="button">Submit</button>
+        <button id="addCoffeeBtn1" type="button" class="btn btn-primary">Submit</button>
     </p>
 </form>
-
+<!-------------------------------------------------------------------------------------->
 <h2 class="title">Add a Coffee</h2>
+<!--Second form-->
 
 <form>
     <p>
@@ -40,10 +41,6 @@
             <option value="dark">dark</option>
             <option value="all">all</option>
         </select>
-
-    </form>
-
-
     </p>
     <label for="nameOfAddedCoffee"><strong class="subTitle">Name</strong></label>
     <input id="nameOfAddedCoffee" value="" type="text"/><br>
@@ -53,9 +50,10 @@
 </form>
 </div>
 
-<div class="d-flex col-6 justify-content float-right" id="coffees"></div>
 
+<div class="d-flex flex-wrap col-6" id="coffees"></div>
 
+<!--JS-->
 <script src="main.js"></script>
 
 <!--Bootstrap-->
@@ -68,6 +66,5 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
         integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
-
 </body>
 </html>
