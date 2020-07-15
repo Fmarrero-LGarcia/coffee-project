@@ -3,7 +3,6 @@
 // moved variables to top
 
 var tbody = document.querySelector('#coffees');
-var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 
 
@@ -28,11 +27,11 @@ var coffees = [
 
 function renderCoffee(coffee) {
     // changed tables into divs
-    var html = '<div class="col-6 coffee">';
+    var html = '<div class="coffee flex-wrap">';
     // html += '<div>' + coffee.id + '</div>';
-    html += '<div class="coffeeName"><h3> ' + coffee.name ;
+    html += '<div class="coffeeName"><h3> ' + coffee.name + " " ;
     //added a span tag for names to beside each other
-    html += '<span class="coffeeRoast"> ' + coffee.roast + '</span></div>';
+    html += '<small><span class="coffeeRoast">' + coffee.roast + '</span></small></div>';
     html += '</div>';
 
     return html;
@@ -103,6 +102,3 @@ function coffeeSearch() {
 
 tbody.innerHTML = renderCoffees(coffees);
 
-
-
-// submitButton.addEventListener('click', updateCoffees);

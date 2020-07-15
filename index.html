@@ -3,59 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <title>Coffee!!!</title>
-   <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
           integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 </head>
 <body>
-<h1 class="mainTitle d-flex justify-content-center">Coffee!</h1><hr>
-<div>
-<!--first coffee form-->
-<form>
-    <p>
-    <div class="form-group col-md-2">
-        <label for="roast-selection"><strong>Roast</strong></label>
-        <select id="roast-selection" class="form-control" onchange="updateCoffees(value)">
-            <option selected>all</option>
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
+<div><h1 class="mainCoffee text-center">Coffee!</h1><hr></div>
+<div class="row d-flex justify-content-end">
+    <div class="col-3" id="forms">
+        <form>
+        <p>
+        <div class="form-group">
+            <label for="roast-selection"><strong class="subTitle">Roast</strong></label>
+            <select id="roast-selection" class="form-control" onchange="updateCoffees(value)">
+                <option selected>all</option>
+                <option>light</option>
+                <option>medium</option>
+                <option>dark</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="coffeeName"><strong class="subTitle">Coffee Name</strong></label><p>
+            <input class="form-control" id="coffeeName" value="" type="text" onkeyup="coffeeElimination(value)"/><br>
+                <button id="addCoffeeBtn1" type="button" class="btn btn-primary">Submit</button>
+        </div>
+        </form>
+
+
+<!-----------------------------------------Add a coffee------------------------------------------------->
+
+    <div id="forms1">
+    <h2 class="title">Add a Coffee</h2>
+    <form >
+        <p>
+        <div class="form-group">
+            <label for="addCoffeeRoast"><strong class="subTitle">Roast</strong></label>
+            <select id="addCoffeeRoast" class="form-control">
+                <option selected>all</option>
+                <option>light</option>
+                <option>medium</option>
+                <option>dark</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="nameOfAddedCoffee"><strong class="subTitle">Name</strong></label><br>
+            <input class="form-control" id="nameOfAddedCoffee" value="" type="text"/><br>
+                <button id="addCoffeeBtn2" type="button" onclick="coffeeSearch()" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
     </div>
-    <label for="coffeeName"><strong class="subTitle">Coffee Name</strong></label>
-    <input id="coffeeName" value="" type="text" onkeyup="coffeeElimination(value)"/><br>
-    <p>
-        <button id="addCoffeeBtn1" type="button" class="btn btn-primary">Submit</button>
-    </p>
-</form>
-<!-------------------------------------------------------------------------------------->
-<h2 class="title">Add a Coffee</h2>
-<!--Second form-->
+    </div>
 
-<form>
-    <p>
-        <label for="addCoffeeRoast"><strong>Roast</strong></label>
-        <select id="addCoffeeRoast">
-            <option value="light">light</option>
-            <option value="medium">medium</option>
-            <option value="dark">dark</option>
-            <option value="all">all</option>
-        </select>
-    </p>
-    <label for="nameOfAddedCoffee"><strong class="subTitle">Name</strong></label>
-    <input id="nameOfAddedCoffee" value="" type="text"/><br>
-    <p>
-    <button id="addCoffeeBtn2" type="button" onclick="coffeeSearch()">Submit</button>
-    </p>
-</form>
+<!--    <div class="row col-6"></div>-->
+    <div class="col-6" id="coffees"></div>
+
 </div>
-
-
-<div class="d-flex flex-wrap col-6" id="coffees"></div>
-
-<!--JS-->
 <script src="main.js"></script>
-
 <!--Bootstrap-->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
